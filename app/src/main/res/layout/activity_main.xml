@@ -5,10 +5,39 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@drawable/gradient_background"
     android:orientation="vertical"
-    >
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+       android:paddingLeft="60dp"
+        android:text="Cat Informater"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/gatto" />
+
+    <Button
+        android:id="@+id/InfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:paddingHorizontal="20dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/btn_bg"
+        android:text="See Information"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>
