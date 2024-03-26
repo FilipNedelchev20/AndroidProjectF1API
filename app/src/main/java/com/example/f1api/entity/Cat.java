@@ -14,8 +14,8 @@ public class Cat {
     private String coat;
     private String pattern;
 
-    public Cat(Long id, String breed, String country, String origin, String coat, String pattern) {
-        this.id = id;
+    public Cat( String breed, String country, String origin, String coat, String pattern) {
+
         this.breed = breed;
         this.country = country;
         this.origin = origin;

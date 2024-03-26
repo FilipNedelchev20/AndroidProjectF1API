@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.f1api.R;
 import com.example.f1api.entity.Cat;
 
-import java.util.Calendar;
 import java.util.List;
 
 public class RecyclerViewCatCharacteristic extends RecyclerView.Adapter<ViewHolderCat> {
@@ -36,7 +35,9 @@ public class RecyclerViewCatCharacteristic extends RecyclerView.Adapter<ViewHold
         holder.txtOrigin.setText(cat.getOrigin());
         holder.txtCoat.setText(cat.getCoat());
         holder.txtPattern.setText(cat.getPattern());
+        holder.saveButton.setVisibility(View.INVISIBLE);
     }
+
 
     @Override
     public int getItemCount() {

@@ -1,6 +1,7 @@
 package com.example.f1api.adapter;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ public class ViewHolderCat extends RecyclerView.ViewHolder {
     public TextView txtOrigin;
     public TextView txtCoat;
     public TextView txtPattern;
+    public Button saveButton;
     public ViewHolderCat(@NonNull View itemView) {
         super(itemView);
         txtBreed = itemView.findViewById(R.id.txtBreed);
@@ -21,6 +23,15 @@ public class ViewHolderCat extends RecyclerView.ViewHolder {
         txtOrigin = itemView.findViewById(R.id.txtOrigin);
         txtCoat = itemView.findViewById(R.id.txtCoat);
         txtPattern = itemView.findViewById(R.id.txtPattern);
+        saveButton = itemView.findViewById(R.id.btnSaveCharacter);
+    }
+
+    public Button getSaveButton() {
+        return saveButton;
+    }
+
+    public void setSaveButton(Button saveButton) {
+        this.saveButton = saveButton;
     }
 
     public TextView getTxtBreed() {
