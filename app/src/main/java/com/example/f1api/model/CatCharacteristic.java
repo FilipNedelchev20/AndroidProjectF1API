@@ -1,23 +1,12 @@
-package com.example.f1api.entity;
+package com.example.f1api.model;
 
-import androidx.room.Entity;
-
-
-
-@Entity(tableName = "cat")
-public class Cat {
+public class CatCharacteristic {
     private String breed;
     private String country;
     private String origin;
     private String coat;
     private String pattern;
-    public Cat(String breed, String country, String origin, String coat, String pattern) {
-        this.breed = breed;
-        this.country = country;
-        this.origin = origin;
-        this.coat = coat;
-        this.pattern = pattern;
-    }
+
     public String getBreed() {
         return breed;
     }
@@ -58,20 +47,11 @@ public class Cat {
         this.pattern = pattern;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "Cat{" +
-                "breed='" + breed + '\'' +
-                ", country='" + country + '\'' +
-                ", origin='" + origin + '\'' +
-                ", coat='" + coat + '\'' +
-                ", pattern='" + pattern + '\'' +
-                '}';
+    public CatCharacteristic(String breed, String country, String origin, String coat, String pattern) {
+        this.breed = breed;
+        this.country = country;
+        this.origin = origin;
+        this.coat = coat;
+        this.pattern = pattern;
     }
-
-
-
-
 }
