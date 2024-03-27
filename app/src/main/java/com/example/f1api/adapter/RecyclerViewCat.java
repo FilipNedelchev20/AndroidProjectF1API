@@ -1,5 +1,8 @@
 package com.example.f1api.adapter;
 
+import static android.content.ContentValues.TAG;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,8 +41,12 @@ public class RecyclerViewCat extends RecyclerView.Adapter<ViewHolderCat> {
         holder.txtOrigin.setText(catCharacteristic.getOrigin());
         holder.txtCoat.setText(catCharacteristic.getCoat());
         holder.txtPattern.setText(catCharacteristic.getPattern());
+        holder.saveButton.setOnClickListener(v -> {
+            Log.w(TAG, "BUTTON SAVE IS CLICKED FOR " + catCharacteristic.getBreed());
+            insertCat(catCharacteristic);
+        });
     }
-    private void insertCharacter(CatCharacteristic catCharacteristic) {
+    private void insertCat(CatCharacteristic catCharacteristic) {
         CatDao catDao = appDatabase.catDao();
 
         Cat catToInsert = new Cat(catCharacteristic.getBreed(),

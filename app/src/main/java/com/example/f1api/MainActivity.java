@@ -96,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
         page = currPage;
         loadCats(catApiClient, editor);
         btnNext.setOnClickListener(v -> {
+            if (page ==4){
+                return;
+            }
             page++;
             loadCats(catApiClient, editor);
         });
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.putInt("currentPage", page);
                     editor.apply();
                     if (swResponse != null) {
+                        Log.e(TAG, swResponse.getCount() + "");
                         setAdapter(swResponse.getResults());
                         Log.d(TAG, "Response: " + swResponse.getCount());
                     } else {
@@ -132,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<CatResponse> call, Throwable t) {
-                Log.e(TAG, "Error getting sw response: " + t.getMessage());
+                Log.e(TAG, "Error getting cat response: " + t.getMessage());
             }
         });
     }

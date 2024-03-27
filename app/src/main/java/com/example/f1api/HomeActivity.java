@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        recyclerView = findViewById(R.id.recyclerViewHome);
+         recyclerView = findViewById(R.id.recyclerViewHome);
         Button btnBack = findViewById(R.id.btnBack);
 
         Intent goBack = new Intent(this, MainActivity.class);
@@ -42,4 +42,5 @@ public class HomeActivity extends AppCompatActivity {
         List<Cat> cats = catDao.findAllCats();
         setAdapter(cats);
     }
+
 }

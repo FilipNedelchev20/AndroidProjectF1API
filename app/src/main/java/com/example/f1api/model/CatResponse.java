@@ -1,16 +1,14 @@
 package com.example.f1api.model;
 
-import com.example.f1api.entity.Cat;
-
 import java.util.List;
 
 public class CatResponse {
     private int count;
-    private List<CatCharacteristic> results;
+    private List<CatCharacteristic> data;
 
-    public CatResponse(int count, List<CatCharacteristic> results) {
+    public CatResponse(int count, List<CatCharacteristic> data) {
         this.count = count;
-        this.results = results;
+        this.data = data;
     }
 
     public int getCount() {
@@ -22,10 +20,10 @@ public class CatResponse {
     }
 
     public List<CatCharacteristic> getResults() {
-        return results;
+        return data;
     }
 
     public void setResults(List<CatCharacteristic> results) {
-        this.results = results;
+        this.data = data;
     }
 }
