@@ -1,8 +1,11 @@
 package com.example.f1api.adapter;
 
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +25,7 @@ public class RecyclerViewCatCharacteristic extends RecyclerView.Adapter<ViewHold
     @NonNull
     @Override
     public ViewHolderCat onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.cat_info_layout, parent, false);
         return new ViewHolderCat(itemView);
@@ -36,6 +40,7 @@ public class RecyclerViewCatCharacteristic extends RecyclerView.Adapter<ViewHold
         holder.txtCoat.setText(cat.getCoat());
         holder.txtPattern.setText(cat.getPattern());
         holder.saveButton.setVisibility(View.INVISIBLE);
+
     }
 
 

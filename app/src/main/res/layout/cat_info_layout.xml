@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/gradient_background2"
+
     android:orientation="vertical"
     >
 
@@ -16,7 +17,16 @@
         android:paddingLeft="80dp"
         android:text="Information"
         android:textSize="40dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textAppearance="@drawable/gradient_background"
+        />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="162dp"
+        android:layout_height="143dp"
+        app:srcCompat="@drawable/cat" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -26,15 +36,23 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Breed: "
+            android:textSize="25dp"
+            android:paddingLeft="10dp"
             android:textColor="@color/material_dynamic_neutral50"
             android:textStyle="italic" />
 
         <TextView
             android:id="@+id/txtBreed"
             android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
             android:layout_height="wrap_content"
-            android:text="Breed" />
+            android:text="Breed"
+            android:textStyle="bold"
+            android:textAppearance="@drawable/gradient_background"
+            />
 
     </LinearLayout>
 
@@ -49,13 +67,23 @@
             android:layout_height="wrap_content"
             android:text="Country: "
             android:textColor="@color/material_dynamic_neutral50"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:paddingLeft="10dp"
+            />
 
         <TextView
             android:id="@+id/txtCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Country"/>
+            android:layout_marginTop="10dp"
+            android:text="Country"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textAppearance="@drawable/gradient_background"
+            />
+
     </LinearLayout>
 
 
@@ -69,13 +97,22 @@
             android:layout_height="wrap_content"
             android:text="Origin: "
             android:textColor="@color/material_dynamic_neutral50"
-            android:textStyle="italic"/>
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:paddingLeft="10dp"
+            />
 
         <TextView
             android:id="@+id/txtOrigin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Origin"/>
+            android:text="Origin"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@drawable/gradient_background"
+            />
 
     </LinearLayout>
 
@@ -90,13 +127,22 @@
             android:layout_height="wrap_content"
             android:text="Coat: "
             android:textColor="@color/material_dynamic_neutral50"
-            android:textStyle="italic"/>
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:paddingLeft="10dp"
+            />
 
         <TextView
             android:id="@+id/txtCoat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Coat"/>
+            android:text="Coat"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@drawable/gradient_background"
+            />
 
     </LinearLayout>
 
@@ -110,13 +156,22 @@
             android:layout_height="wrap_content"
             android:text="Pattern: "
             android:textColor="@color/material_dynamic_neutral50"
-            android:textStyle="italic"/>
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:paddingLeft="10dp"
+            />
 
         <TextView
             android:id="@+id/txtPattern"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pattern" />
+            android:text="Pattern"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@drawable/gradient_background"
+            />
 
     </LinearLayout>
 
@@ -125,6 +180,9 @@
         android:id="@+id/btnSaveCharacter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/btn_bg"
         android:text="Save"/>
 
 

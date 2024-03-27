@@ -5,9 +5,12 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private List<CatCharacteristic> catCharacteristicList = new ArrayList<>();
     public static AppDatabase appDatabase;
     int page = 1;
+
+
     private void setAdapter(List<CatCharacteristic> catCharacteristicList) {
         RecyclerViewCat recyclerViewCat = new RecyclerViewCat(catCharacteristicList, appDatabase);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -60,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+
+
 
         appDatabase = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "cats_new")
                 .allowMainThreadQueries()
@@ -110,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
             page--;
             loadCats(catApiClient, editor);
         });
-
     }
 
     private void loadCats(CatApiClient starWarsApiClient, SharedPreferences.Editor editor) {
